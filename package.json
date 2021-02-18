@@ -1,0 +1,22 @@
+{
+  "name": "signal",
+  "version": "1.0.0",
+  "description": "Signal Server Take-Home Exercise",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/argparse": "^2.0.5",
+    "@types/axios": "^0.14.0",
+    "@types/node": "^14.14.28",
+    "@types/tunnel": "^0.0.1",
+    "typescript": "^4.1.5"
+  },
+  "dependencies": {
+    "argparse": "^2.0.1",
+    "node": "^15.8.0",
+    "ts-node": "^9.1.1"
+  },
+  "scripts": {
+    "client": "curl -x http://127.0.0.1:3000 --proxytunnel -v -o glify.html 'http://api.giphy.com/v1/gifs/search?q=Im+excited&api_key='${API_KEY}",
+    "server": "ts-node src/index.ts -v -H api.giphy.com"
+  }
+}
